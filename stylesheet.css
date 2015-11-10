@@ -1,0 +1,23 @@
+.icon {
+    background-image: url("icons/icon.png");
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+    padding: 0px 3px;
+}
+
+.iconPlus {
+    background-image: url("icons/iconPlus.png");
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+    padding: 0px 3px;
+}
+
+.iconMinus {
+    background-image: url("icons/iconMinus.png");
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+    padding: 0px 3px;
+}

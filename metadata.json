@@ -1,0 +1,15 @@
+{
+  "author": "Sylvain Doignon", 
+  "description": "Toggle zoom / scale screen with xrandr.", 
+  "extension-id": "toggle-zoom", 
+  "name": "Toggle Zoom", 
+  "settings-schema": "org.gnome.shell.extensions.toggle-zoom", 
+  "shell-version": [
+    "3.12", 
+    "3.14", 
+    "3.16", 
+    "3.18"
+  ], 
+  "uuid": "toggleZoom@sylvain.doignon", 
+  "version": 1
+}

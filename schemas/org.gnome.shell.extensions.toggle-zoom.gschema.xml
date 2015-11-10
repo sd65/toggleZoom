@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schemalist gettext-domain="gnome-shell-extensions">
+
+  <schema path="/org/gnome/shell/extensions/toggle-zoom/" id="org.gnome.shell.extensions.toggle-zoom">
+  
+    <key name="output" type="s">
+      <default>"HDMI1"</default>
+      <summary>Name of the screen to change</summary>
+      <description>Name of the screen to change</description>
+    </key>
+    <key name="scale" type="d">
+      <default>0.7</default>
+      <summary>Zoom factor</summary>
+      <description>Zoom factor</description>
+    </key>
+    
+  </schema>
+  
+</schemalist>
