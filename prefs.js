@@ -1,11 +1,15 @@
 const Gtk = imports.gi.Gtk;
 const Convenience = imports.misc.extensionUtils.getCurrentExtension().imports.lib.convenience;
 
+const Gettext = imports.gettext.domain('toggleZoom');
+const _ = Gettext.gettext;
+
 let settings;
 
 function init()
 {
     settings = Convenience.getSettings();
+	Convenience.initTranslations("toggleZoom");
 }
 
 function buildPrefsWidget() {
@@ -15,7 +19,7 @@ function buildPrefsWidget() {
     let frame = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL, border_width: 10, spacing: 10});
 
     let labelScale = new Gtk.Label({
-        label: "Zoom factor:\n<small>1.0 = normal, 0.5 = twice as small.</small>",
+        label: _("Zoom factor")+":\n<small>"+_("1.0 = normal, 0.5 = twice as small.")+"</small>",
         use_markup: true,
         xalign: 0
     });
@@ -30,7 +34,7 @@ function buildPrefsWidget() {
     frame.add(scale);
 
     let labelOutput = new Gtk.Label({
-        label: "Screen:\n<small>Pick your value by running this command:</small>\n<tt><small>xrandr | awk -F ' ' '/ connected/ { print $1}'</small></tt>",
+        label: _("Screen")+":\n<small>"+_("Pick your value by running this command")+":</small>\n<tt><small>xrandr | awk -F ' ' '/ connected/ { print $1}'</small></tt>",
         use_markup: true,
         xalign: 0
     });
