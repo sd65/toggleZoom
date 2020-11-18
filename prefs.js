@@ -19,7 +19,7 @@ function buildPrefsWidget() {
     let frame = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL, border_width: 10, spacing: 10});
 
     let labelScale = new Gtk.Label({
-        label: _("Zoom factor")+":\n<small>"+_("1.0 = normal, 0.5 = twice as small.")+"</small>",
+        label: _("Zoom factor")+":\n<small>"+_("1.0 is normal, <1.0 is zoomed in, >1.0 is zoomed out.")+"</small>",
         use_markup: true,
         xalign: 0
     });
@@ -27,7 +27,7 @@ function buildPrefsWidget() {
 
     let scale = new Gtk.HScale({
         digits:2,
-        adjustment: new Gtk.Adjustment({lower: 0.1,upper: 0.9,step_increment: 0.05}),
+        adjustment: new Gtk.Adjustment({lower: 0.1,upper: 2.0,step_increment: 0.05}),
         value_pos: Gtk.PositionType.RIGHT
     });
     scale.set_value(settings.get_double("scale"))
